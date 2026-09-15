@@ -1,0 +1,33 @@
+Package: sTiles
+Type: Package
+Title: Tile-Based Sparse Cholesky Factorization and Selected Inverse
+Version: 2026.9.4
+Authors@R: person("Esmail", "Abdul Fattah", role = c("aut", "cre", "cph"),
+    email = "esmail.abdulfattah@gmail.com")
+Description: Interface to the 'sTiles' framework for tile-based sparse Cholesky
+    factorization: log-determinants, selected inverse (marginal variances) and
+    triangular solves, with symbolic reuse so that repeated factorization of
+    matrices sharing one sparsity pattern pays the ordering cost only once, as
+    in a hyperparameter sweep. The compiled glue in this package resolves its
+    symbols at run time against the 'sTiles' solver library ('libstiles'),
+    which is a separate component distributed under its own terms and is not
+    part of this package. Install it once with 'sTiles_install_library()', or
+    point the package at a copy you already have with the 'STILES_LIB'
+    environment variable.
+License: MIT + file LICENSE
+URL: https://esmail-abdulfattah.github.io/sTiles/
+BugReports: https://github.com/esmail-abdulfattah/sTiles/issues
+Imports: methods, Matrix, tools, utils
+Suggests: testthat (>= 3.0.0)
+Config/testthat/edition: 3
+NeedsCompilation: yes
+SystemRequirements: the 'sTiles' solver library (libstiles.so on Linux,
+        libstiles.dylib on macOS, libstiles.dll on Windows), obtained
+        with sTiles_install_library() or supplied by the user
+Encoding: UTF-8
+Config/roxygen2/version: 8.0.0
+Packaged: 2026-09-06 15:22:22 UTC; abdulfe
+Author: Esmail Abdul Fattah [aut, cre, cph]
+Maintainer: Esmail Abdul Fattah <esmail.abdulfattah@gmail.com>
+Repository: CRAN
+Date/Publication: 2026-09-15 10:50:02 UTC
